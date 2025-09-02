@@ -1,0 +1,555 @@
+<  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetaQuímica: Explorando el Metoprolol</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f4f8fb;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    nav h1 {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    /* Header */
+    header {
+    height: 70vh;
+    background: linear-gradient(rgba(30, 60, 114, 0.6), rgba(42, 82, 152, 0.6)),
+      url("estructura 2.png") no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+    margin-top: 60px;
+    }
+
+
+    header h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      animation: fadeInUp 2s ease;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Main sections */
+    main {
+      width: 90%;
+      max-width: 1100px;
+      margin: 2rem auto;
+    }
+
+    section {
+      background: #fff;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: scale(1.02);
+    }
+
+    section h2 {
+      color: #2a5298;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    .imagenes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .imagenes img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .imagenes img:hover {
+      transform: scale(1.08);
+    }
+    figure {
+      text-align: center;
+    }
+    .fig-num {
+      font-style: italic;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .fig-title {
+      font-style: italic;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+    .fig-note {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      background: #1e3c72;
+      color: #fff;
+      padding: 1rem;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1>MetaQuímica</h1>
+    <ul>
+      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#intro">Introduccion</a></li>
+      <li><a href="#informacion">Informacion</a></li> 
+      <li><a href="#imagenes">Imágenes</a></li>
+      <li><a href ="#referencias">Bibliografia</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div>
+      <h2>Explorando el Metoprolol</h2>
+      <p>Un viaje didáctico hacia la estructura molecular</p>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <section id="equipo">
+      <h2>Integrantes del grupo (Clase C1)</h2>
+      <ul>
+        <li>Miguel Angel Alvarez Cotrino</li>
+        <li>Eimmy Valentina Pissa Sosa</li>
+        <li>Juan Rodriguez</li>
+      </ul>
+    </section>
+
+    <section id="intro">
+      <h2>Introducción al laboratorio</h2>
+      <p>
+        En este laboratorio desarrollamos la estructura química del 
+        <strong>Metoprolol</strong> utilizando materiales didácticos que simulan átomos 
+        de carbono, oxígeno, hidrógeno y nitrógeno. Mediante enlaces representativos, 
+        construimos la molécula para comprender mejor su composición y las interacciones 
+        entre sus elementos. Este enfoque práctico nos ayuda a visualizar cómo los 
+        componentes químicos se enlazan y forman compuestos con relevancia biomédica.
+      </p>
+      <figure>
+          <span class="fig-num">Figura 1</span>
+          <span class="fig-title">Metoprolol</span>
+            <img src="Integrante 3.jpg" alt="integrante">     
+        <figcaption class="fig-note">
+            (La Santé, s/f).
+          </figcaption>
+        </figure>
+    </section>
+
+    <section id="informacion">
+         <h2>Usos del medicamento</h2>
+      <p>
+        El Metoprolol es un <strong>betabloqueador</strong> utilizado principalmente en el 
+        tratamiento de enfermedades cardiovasculares, ya que disminuye la frecuencia cardíaca 
+        y la presión arterial al reducir la acción de la adrenalina sobre el corazón; 
+        se emplea para controlar la hipertensión arterial, aliviar la angina de pecho, 
+        mejorar la insuficiencia cardíaca crónica, prevenir y tratar arritmias, 
+        así como reducir el riesgo de un nuevo infarto, y en algunos casos también 
+        se indica para el manejo de migrañas y temblores esenciales. 
+        En esta pagina vamos a enfocarnos en la <strong>insuficiencia cardiaca</strong>.
+    </p>
+    <h2>¿De que trata la insuficiencia cardiaca?</h2>
+    <figure>
+          <span class="fig-num">Figura 2</span>
+          <span class="fig-title">Infografia de la insuficiencia cardiaca</span>
+            <img src="Infografia.png" alt="Infografia">
+        <figcaption class="fig-note">
+            Infografia hecha por el grupo de trabajo de Quìmica Organica (2025).
+          </figcaption>
+        </figure>
+    <h2>¿Como funciona el medicamento?</h2>
+    <figure>
+      <span class = "fig-num">Tabla 1</span>
+      <span class = "fig-title">Propiedades fisioquimicas del medicamento</span>
+        <img src ="Tabla.png">  
+      <figcaption class = "fig-note">
+        Tabla hecha por el grupo de trabajo de Quìmica Organica (2025).
+      </figcaption>
+      <p>
+        Presentaciones más comunes Metoprolol tartrato 
+        (liberación inmediata): comprimidos clásicos, típicamente de 50mg y 100mg
+      </p>
+      <p>
+        Metoprolol succinato (liberación prolongada, tipo XL): 
+        formulaciones de liberación mantenida de 25, 50, 100 y 200 mg (Toprol‑XL)
+      </p>
+      <p>
+        Vías de administración:  Oral (tabletas)
+      </p>
+    </figure>
+    <h2>Articulos Cientificos</h2>
+    <p>
+      Metoprolol CR/XL en insuficiencia cardíaca crónica (subanálisis MERIT-HF)
+        Analiza cómo las diferencias de dosis impactan la reducción del riesgo de mortalidad 
+        y la frecuencia cardíaca en pacientes con insuficiencia cardíaca. (Wikstrand et al., 2002).
+    </p>
+    <p>
+      MERIT-HF (Metoprolol CR/XL Randomized Intervention Trial in Congestive Heart Failure)
+      Demostró que el tratamiento con metoprolol de liberación controlada prolonga la supervivencia y reduce significativamente 
+      las hospitalizaciones en pacientes con insuficiencia cardíaca crónica. (MERIT-HF Study Group, 1999).
+    </p>
+    <p>
+      Impacto profesional (Ingeniería Biomédica): Comprender los ensayos clínicos al momento de participar en 
+      la validación de software médico, equipos de telemedicina o sistemas de apoyo a la decisión clínica.
+    </p>
+    <h2>Caracterizacion del medicamento</h2>
+    <p>
+      En la siguiente descripción se identificarán los principales grupos funcionales presentes en la estructura química mostrada. 
+      Estos grupos son los responsables de las propiedades químicas y biológicas de la molécula, 
+      por lo que reconocerlos permite comprender mejor su reactividad y posibles aplicaciones.
+    </p>
+    <figure>
+          <span class="fig-num">Figura 3</span>
+          <span class="fig-title">Modelo de la estructura química del Metoprolol</span>
+            <img src="Estructura 5.PNG" alt="Estructura con grupos funcionales">
+        <figcaption class="fig-note">
+            (Labbé, s/f).
+          </figcaption>
+        </figure>
+        <p>
+        <ul>
+          <li>Naranja: Anillo aromático (benceno)</li>
+          <li>Celeste: Éter aromático (–O–)</li>
+          <li>Morado: Alcohol (–OH)</li>
+          <li>Verde Amina secundaria (–NH–)</li>
+          <li>Rojo: Éter alifático (–O–)</li>
+        </ul>
+        </p>
+        <p>
+          A continuación se presenta la tabla de hibridación de los átomos de carbono, nitrógeno y oxígeno de la molécula analizada. 
+          En ella se especifican la hibridación, la clase, los ángulos aproximados, el tipo de enlace y la geometría molecular de cada caso.
+        </p>
+        <figure>
+        <span class="fig-num">Tabla 2</span>
+          <span class="fig-title">Tabla de hibridaciones</span>
+    <table border="1" cellspacing="0" cellpadding="5" style="text-align: center; border-collapse: collapse; width: 100%;">
+      <tr>
+        <th>Átomo</th>
+        <th>Hibridación</th>
+        <th>Clase</th>
+        <th>Ángulos aprox.</th>
+        <th>Tipo de enlace</th>
+        <th>Geometría molecular</th>
+      </tr>
+      <tr>
+        <td>Carbonos del anillo aromático (6C)</td>
+        <td> sp²</td>
+        <td>Aromático</td>
+        <td>~120°</td>
+        <td>σ + π (dobles conjugados)</td>
+        <td>Trigonal plana</td>
+      </tr>
+      <tr>
+        <td>Carbono del metoxi (–O–CH₂–)</td>
+        <td>sp³</td>
+        <td>Saturado (alifático)</td>
+        <td>~109.5°</td>
+        <td>σ</td>
+        <td>Tetraédrica</td>
+      </tr>
+      <tr>
+        <td>Carbono del grupo etoxi (–CH₃ del extremo)</td>
+        <td>sp³</td>
+        <td>Saturado</td>
+        <td>~109.5°</td>
+        <td>σ</td>
+        <td>Tetraédrica</td>
+      </tr>
+      <tr>
+        <td>Carbono puente entre anillo y –O– (–CH₂–O–)</td>
+        <td>sp³</td>
+        <td>Saturado</td>
+        <td>~109.5°</td>
+        <td>σ</td>
+        <td>Tetraédrica</td>
+      </tr>
+      <tr>
+        <td>Carbono con –OH (–CH–OH–)</td>
+        <td>sp³</td>
+        <td>Saturado</td>
+        <td>~109.5°</td>
+        <td>σ</td>
+        <td>Tetraédrica</td>
+      </tr>
+      <tr>
+        <td>Carbono adyacente al N (–CH₂–NH–)</td>
+        <td>sp³</td>
+        <td>Saturado</td>
+        <td>~109.5°</td>
+        <td>σ</td>
+        <td>Tetraédrica</td>
+      </tr>
+      <tr>
+        <td>Carbono del grupo isopropilo (–CH–)</td>
+        <td>sp³</td>
+        <td>Saturado</td>
+        <td>~109.5°</td>
+        <td>σ</td>
+        <td>Tetraédrica</td>
+      </tr>
+      <tr>
+        <td>Carbonos de los –CH₃ terminales</td>
+        <td>sp³</td>
+        <td>Saturados</td>
+        <td>~109.5°</td>
+        <td>σ</td>
+        <td>Tetraédrica</td>
+      </tr>
+      <tr>
+        <td>Oxígeno del éter aromático (Ar–O–)</td>
+        <td>sp³</td>
+        <td>Heteroátomo (2 pares libres)</td>
+        <td>~104.5°</td>
+        <td>2σ</td>
+        <td>Angular</td>
+      </tr>
+      <tr>
+        <td>Oxígeno del alcohol (–OH)</td>
+        <td>sp³</td>
+        <td>Heteroátomo (2 pares libres)</td>
+        <td>~104.5°</td>
+        <td>2σ (C–O, O–H)</td>
+        <td>Angular</td>
+      </tr>
+      <tr>
+        <td>Nitrógeno de la amina secundaria (–NH–)</td>
+        <td>sp³</td>
+        <td>Amina secundaria (1 par libre)</td>
+        <td>~107°</td>
+        <td>3σ</td>
+        <td>Piramidal trigonal</td>
+      </tr>
+    </table>
+    <figcaption class="fig-note">
+            (ChatGPT, 2025).
+          </figcaption>
+        </figure>
+    <h2>Aplicacion Profesional</h2>
+    <p>
+      El estudio del Metoprolol desde la química orgánica permite al ingeniero biomédico comprender cómo los grupos funcionales de 
+      la molécula influyen en su acción terapéutica. Este conocimiento es clave en el diseño de sistemas de liberación controlada 
+      y en la validación de tecnologías médicas que monitorean parámetros cardiovasculares, integrando la base molecular del fármaco 
+      con soluciones prácticas para el cuidado de la salud.
+    </p>
+    </section>
+    <section>
+    <h2>Conclusiones</h2>
+    <p><!-- VACIO --></p>
+    </section>
+
+    <section id="imagenes">
+      <h2>Imágenes del laboratorio</h2>
+      <div class="imagenes">
+        <figure>
+          <span class="fig-num">Figura 4</span>
+          <span class="fig-title">Modelo didáctico de la estructura química del Metoprolol</span>
+          <img src="Estructura.jpeg" alt="Modelo didáctico del Metoprolol hecho por el grupo">
+          <figcaption class="fig-note">
+            Fotografía tomada por el Grupo de trabajo de Química Orgánica (2025).
+          </figcaption>
+        </figure>
+        <figure>
+          <span class="fig-num">Figura 5</span>
+          <span class="fig-title">Modelo de la estructura química del Metoprolol</span>
+            <img src="Estructura 1.PNG" alt="Materiales didácticos">
+        <figcaption class="fig-note">
+            (Herráez, s/f).
+          </figcaption>
+        </figure>
+        <figure>
+          <span class="fig-num">Figura 6</span>
+          <span class="fig-title">Modelo de la estructura química del Metoprolol</span>
+            <img src="Estructura 3.PNG" alt="Materiales didácticos">
+        <figcaption class="fig-note">
+            (Herráez, s/f).
+          </figcaption>
+        </figure>
+        <figure>
+          <span class="fig-num">Figura 7</span>
+          <span class="fig-title">Modelo de la estructura química del Metoprolol</span>
+            <img src="Estructura 4.PNG" alt="Materiales didácticos">
+        <figcaption class="fig-note">
+            (Herráez, s/f).
+          </figcaption>
+        </figure>
+        <figure>
+          <span class="fig-num">Figura 8</span>
+          <span class="fig-title">Eimmy Pissa</span>
+            <img src="Integrante 2.jpg" alt="integrante">
+        <figcaption class="fig-note">
+            Fotografía tomada por el Grupo de trabajo de Química Orgánica (2025).
+          </figcaption>
+        </figure>
+        <figure>
+          <span class="fig-num">Figura 9</span>
+          <span class="fig-title">Juan Rodriguez</span>
+            <img src="Integrante 4.png" alt="integrante">
+        <figcaption class="fig-note">
+            Fotografía tomada por el Grupo de trabajo de Química Orgánica (2025).
+          </figcaption>
+        </figure>
+        <figure>
+          <span class="fig-num">Figura 10</span>
+          <span class="fig-title">Miguel Alvarez</span>
+            <img src="Integrante 5.jpeg" alt="integrante">
+        <figcaption class="fig-note">
+            Fotografía tomada por el Grupo de trabajo de Química Orgánica (2025).
+          </figcaption>
+        </figure>
+      </div>
+      </div>
+    </section>
+    <section id="referencias">
+      <h2>Bibliografía</h2>
+      <p>
+        1. Herráez, A. (s/f). Bricomoléculas: construye tu propia molécula. Uah.es. 
+        Recuperado el 31 de Agosto de 2025, de https://biomodel.uah.es/en/DIY/JSME/draw.es.htm
+    </p>
+    <p>
+        2. Grupo de trabajo Química Organica C1. (2025-2).
+    <p>
+        3. OpenAI. (2025). ChatGPT (versión GPT-5) [Modelo de lenguaje grande]. https://chat.openai.com/
+    </p>
+    <p>
+        4. La Santé. (s/f). Lasanteca.com. 
+        Recuperado el 1 de septiembre de 2025, de https://www.lasanteca.com/producto/metoprolol/
+    </p>
+    <p>
+      5. Kotecha, D., & Holmes, J. (2023). Metoprolol. 
+      In StatPearls. StatPearls Publishing. https://www.ncbi.nlm.nih.gov/books/NBK532923/
+    </p>
+    <p>
+      6. MERIT-HF Study Group. (1999). Effect of metoprolol CR/XL in chronic heart failure: Metoprolol CR/XL Randomised Intervention 
+      Trial in Congestive Heart Failure. The Lancet, 353(9169), 2001–2007. https://doi.org/10.1016/S0140-6736(99)04440-2
+    </p>
+    <p>
+      7. U.S. National Library of Medicine. (2024). Insuficiencia cardíaca. MedlinePlus.
+       https://medlineplus.gov/spanish/ency/article/000158.htm
+    </p>
+    <p>
+      8. Labbé, C. (s. f.). Monographie - Metoprolol tartrate - Stabilis 4.0. 
+      https://www.stabilis.org/Monographie.php?IdMolecule=348&codeLangue=SP-sp
+    </p>
+    <p>
+      9. Wikstrand, J., Hjalmarson, Å., Waagstein, F., Fagerberg, B., Goldstein, S., Kjekshus, J., … Wedel, H.; MERIT-HF Study Group. 
+      (2002). Dose of metoprolol CR/XL and clinical outcomes in patients with heart failure: 
+      Analysis of the experience in the Metoprolol CR/XL Randomized Intervention Trial in Chronic Heart Failure (MERIT-HF). 
+      Journal of the American College of Cardiology, 40(3), 491–498. https://doi.org/10.1016/S0735-1097(02)01970-8
+    </p>
+    </section></main>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MetaQuímica | Proyecto de ejecucion sobre el Metoprolol</p>
+  </footer>
+</body>
+</html>
